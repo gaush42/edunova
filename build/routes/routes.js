@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const userController_1 = require("../controller/userController");
+const bookController_1 = require("../controller/bookController");
+const transactionController_1 = require("../controller/transactionController");
+const router = express_1.default.Router();
+router.post('/adduser', userController_1.addUser);
+router.get('/users', userController_1.getAllUsers);
+router.post('/addbook', bookController_1.addBook);
+router.get('/books', bookController_1.getAllBooks);
+router.get('/books/search', bookController_1.search);
+router.get('/books/rent-range', bookController_1.rentRange);
+router.get('/books/adv-search', bookController_1.advSearch);
+router.post('/transaction/issue-book', transactionController_1.issueBook);
+router.post('/transaction/return-book', transactionController_1.returnBook);
+router.get('/transaction/book-history', transactionController_1.bookHistory);
+router.get('/transaction/total-rent', transactionController_1.totalRent);
+router.get('/transaction/user-books', transactionController_1.userBooks);
+router.post('/transaction/date-range', transactionController_1.bookIssuedBetween);
+exports.default = router;
