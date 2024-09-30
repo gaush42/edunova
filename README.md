@@ -6,7 +6,7 @@
 - [npm](https://www.npmjs.com/get-npm)
 
 ## API Documentation
-You can also test the Api with running locally
+You can also test the Api without running locally
 Here is the API Documentation - [Click Here](https://documenter.getpostman.com/view/37875560/2sAXqzXycb)
 ## Setup
 
